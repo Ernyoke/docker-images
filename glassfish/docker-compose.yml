@@ -1,0 +1,15 @@
+# Use admin/example as user/password credentials
+version: '3.1'
+
+services:
+
+  glassfish:
+    image: ernyoke/glassfish-5.0.1 
+    restart: always
+    environment:
+      GLASSFISH_PASS: example
+    ports:
+      - 4848:4848
+      - 8080:8080
+      - 8181:8181
+      - 9009:9009
